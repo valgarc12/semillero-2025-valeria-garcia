@@ -1,0 +1,27 @@
+/* --------- Reset básico --------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* Paleta usada:
+   000000 – Fondo
+   2F4550 – Principal
+   586F7C – Texto suave
+   88D8D9 – Acento
+   F4F4F9 – Claro limpio
+*/
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  background: #000000;
+  color: #2f4550;
+}
