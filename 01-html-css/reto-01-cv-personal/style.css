@@ -1,4 +1,4 @@
-/* --------- Reset básico --------- */
+/* --------- RESET BÁSICO --------- */
 *,
 *::before,
 *::after {
@@ -11,12 +11,12 @@ html {
   font-size: 16px;
 }
 
-/* Paleta usada:
-   000000 – Fondo
-   2F4550 – Principal
-   586F7C – Texto suave
-   88D8D9 – Acento
-   F4F4F9 – Claro limpio
+/* PALETA USADA:
+   000000 – FONDO
+   2F4550 – PRINCIPAL
+   586F7C – TEXTO SUAVE
+   88D8D9 – ACENTO
+   F4F4F9 – CLARO LIMPIO
 */
 
 body {
@@ -24,4 +24,120 @@ body {
   line-height: 1.6;
   background: #000000;
   color: #2f4550;
+}
+
+/* --------- Contenedor principal --------- */
+.page {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
+  background: #f4f4f9;
+  border-radius: 1.25rem;
+  border: 1px solid #2f4550;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+/* --------- Header --------- */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-bottom: 1px solid #88d8d9;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2f4550;
+}
+
+.tagline {
+  margin-top: 0.5rem;
+  color: #586f7c;
+}
+
+.header-contact {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #586f7c;
+}
+
+.header-contact a {
+  color: #586f7c;
+  text-decoration: none;
+}
+
+.header-contact a:hover {
+  color: #88d8d9;
+}
+
+/* --------- Secciones --------- */
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #586f7c;
+  margin-bottom: 0.85rem;
+  border-left: 4px solid #88d8d9;
+  padding-left: 0.5rem;
+}
+
+/* --------- Items --------- */
+.item {
+  background: rgba(136, 216, 217, 0.07);
+  padding: 0.9rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1.2rem;
+}
+
+.item h3 {
+  color: #2f4550;
+}
+
+.item-meta {
+  color: #586f7c;
+  margin-bottom: 0.35rem;
+}
+
+/* --------- Habilidades --------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.skills-grid h3 {
+  color: #2f4550;
+}
+
+/* --------- Contacto --------- */
+.contact-list li {
+  margin-bottom: 0.25rem;
+}
+
+/* --------- Footer --------- */
+.footer {
+  border-top: 1px solid #88d8d9;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  text-align: center;
+  color: #586f7c;
+}
+
+/* --------- Responsivo --------- */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: left;
+  }
 }
