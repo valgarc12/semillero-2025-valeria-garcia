@@ -11,101 +11,139 @@ html {
   font-size: 16px;
 }
 
-/* PALETA USADA:
-   000000 – FONDO
-   2F4550 – PRINCIPAL
-   586F7C – TEXTO SUAVE
-   88D8D9 – ACENTO
-   F4F4F9 – CLARO LIMPIO
-*/
+/* --------- ESTILO GENERAL --------- */
 
 body {
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
-  background: #000000;
-  color: #2f4550;
+  background: #f5f5f5;           
+  color: #222222;                
+  padding: 2rem 1rem;
 }
 
-/* --------- Contenedor principal --------- */
+/* Contenedor principal */
 .page {
   max-width: 900px;
-  margin: 3rem auto;
+  margin: 0 auto 3rem;
   padding: 2.5rem 2rem;
-  background: #f4f4f9;
-  border-radius: 1.25rem;
-  border: 1px solid #2f4550;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+  background: #ffffff;           
+  border-radius: 0.75rem;
+  border: 1px solid #e0e0e0;     
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
 }
 
-/* --------- Header --------- */
+/* --------- HEADER --------- */
+
 .header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1.5rem;
-  border-bottom: 1px solid #88d8d9;
   padding-bottom: 1.5rem;
   margin-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .name {
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: 700;
-  color: #2f4550;
+  letter-spacing: 0.03em;
+  color: #111111;
 }
 
 .tagline {
   margin-top: 0.5rem;
-  color: #586f7c;
+  color: #555555;
+  max-width: 28rem;
 }
 
 .header-contact {
   text-align: right;
   font-size: 0.9rem;
-  color: #586f7c;
+  color: #555555;
 }
 
 .header-contact a {
-  color: #586f7c;
+  color: #555555;
   text-decoration: none;
 }
 
 .header-contact a:hover {
-  color: #88d8d9;
+  text-decoration: underline;
 }
 
-/* --------- Secciones --------- */
+/* --------- LINKS GENERALES --------- */
+
+a {
+  color: #1f4f7f;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  color: #16385a;
+}
+
+/* --------- SECCIONES --------- */
+
 .section {
-  margin-bottom: 2rem;
+  margin-bottom: 2.2rem;
+  transition: 0.3s;
+  border-radius: 0.5rem;
+}
+
+.section:hover {
+  background: #f8faff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
 }
 
 .section h2 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
-  color: #586f7c;
-  margin-bottom: 0.85rem;
-  border-left: 4px solid #88d8d9;
-  padding-left: 0.5rem;
+  letter-spacing: 0.12em;
+  color: #666666;
+  margin-bottom: 0.9rem;
 }
 
-/* --------- Items --------- */
+.section p {
+  margin-bottom: 0.4rem;
+  color: #333333;
+}
+
+/* --------- ITEMS --------- */
+
 .item {
-  background: rgba(136, 216, 217, 0.07);
-  padding: 0.9rem;
-  border-radius: 0.75rem;
-  margin-bottom: 1.2rem;
+  padding: 0.9rem 0.9rem 0.9rem 0.8rem;
+  border-left: 3px solid #c9e4ff;
+  background: #fafafa;
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
 }
 
 .item h3 {
-  color: #2f4550;
+  color: #222222;
+  font-size: 1rem;
+  margin-bottom: 0.1rem;
 }
 
 .item-meta {
-  color: #586f7c;
+  color: #777777;
+  font-size: 0.9rem;
   margin-bottom: 0.35rem;
 }
 
-/* --------- Habilidades --------- */
+.item ul {
+  padding-left: 1.1rem;
+}
+
+.item li {
+  margin-bottom: 0.25rem;
+}
+
+/* --------- HABILIDADES --------- */
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -113,31 +151,150 @@ body {
 }
 
 .skills-grid h3 {
-  color: #2f4550;
+  color: #222222;
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
 }
 
-/* --------- Contacto --------- */
+.skills-grid ul {
+  padding-left: 1.1rem;
+}
+
+.skills-grid li {
+  font-size: 0.9rem;
+  color: #444444;
+  margin-bottom: 0.15rem;
+}
+
+/* --------- CONTACTO --------- */
+
+.contact-list {
+  list-style: none;
+}
+
 .contact-list li {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
 }
 
-/* --------- Footer --------- */
+/* --------- EXPERIENCIA (tarjetas tipo UI moderna) --------- */
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.experience-card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid #e0e0e0;
+  padding: 1.2rem 1.4rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+}
+
+.experience-header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.experience-role {
+  font-weight: 600;
+  color: #333333;
+  font-size: 0.95rem;
+}
+
+.experience-card ul {
+  padding-left: 1.1rem;
+  margin-top: 0.3rem;
+}
+
+.experience-card li {
+  margin-bottom: 0.3rem;
+  color: #444444;
+}
+
+/* --------- LOGO REDONDO --------- */
+
+.experience-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #f2f4f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --------- FOOTER --------- */
+
 .footer {
-  border-top: 1px solid #88d8d9;
-  margin-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 1.5rem;
   padding-top: 1rem;
   text-align: center;
-  color: #586f7c;
+  color: #777777;
+  font-size: 0.85rem;
 }
 
-/* --------- Responsivo --------- */
+/* --------- BOTÓN PARA DESCARGAR PDF --------- */
+.btn-cv {
+  display: inline-block;
+  background: black;         
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-cv:hover {
+  background: black;
+}
+
+/* --------- CENTRAR BOTÓN DE CV --------- */
+#download-cv {
+  text-align: center;
+}
+
+/* --------- RESPONSIVO --------- */
+
 @media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
+  body {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .page {
+    padding: 2rem 1.5rem;
   }
 
   .header {
     flex-direction: column;
     text-align: left;
+  }
+
+  .header-contact {
+    text-align: left;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 }
